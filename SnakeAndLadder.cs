@@ -10,8 +10,10 @@ namespace SnakeAndLadderProblem
         {
             int playerPosition = 0;
             Console.WriteLine("Welcome to Snake and Ladder!");
+            int diceCount = 0;
             while (playerPosition < 100) 
             {
+                diceCount++;
                 Console.WriteLine($"You are currently at position {playerPosition}.");
                 Random random = new Random();
                 int diceValue = random.Next(1, 7);
@@ -86,6 +88,7 @@ namespace SnakeAndLadderProblem
                     Console.WriteLine("Congratulations! You reached position 100 and won the game!");
                 }
             }
+            Console.WriteLine("Total Number of Time was play "+diceCount);
         }
          
     }
