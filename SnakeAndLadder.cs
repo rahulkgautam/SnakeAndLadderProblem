@@ -9,7 +9,6 @@ namespace SnakeAndLadderProblem
         public static void PlaySnakeAndLadder()
         {
             int playerPosition = 0;
-
             Console.WriteLine("Welcome to Snake and Ladder!");
 
             while (playerPosition < 100) 
@@ -17,9 +16,16 @@ namespace SnakeAndLadderProblem
                 Console.WriteLine($"You are currently at position {playerPosition}.");
                 Random random = new Random();
                 int diceValue = random.Next(1, 7);
-                Console.WriteLine($"You rolled a {diceValue}.");                
+                Console.WriteLine($"You rolled a {diceValue}.");
                 playerPosition += diceValue;
 
+                if (playerPosition > 100) 
+                {
+                    playerPosition -= diceValue;
+                    Console.WriteLine("Oops! You need to roll the exact number to reach 100.");
+                }
+                else
+                {
                     switch (playerPosition)
                     {
                         case 3:
@@ -82,6 +88,7 @@ namespace SnakeAndLadderProblem
                     Console.WriteLine("Congratulations! You reached position 100 and won the game!");
                 }
             }
+        }
          
     }
 }
