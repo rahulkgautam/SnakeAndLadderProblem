@@ -15,8 +15,8 @@ namespace SnakeAndLadderProblem
             while (playerPosition < 100) 
             {
                 Console.WriteLine($"You are currently at position {playerPosition}.");
-                Console.WriteLine("Enter your Number");
-                int diceValue = Convert.ToInt32(Console.ReadLine());
+                Random random = new Random();
+                int diceValue = random.Next(1, 7);
                 Console.WriteLine($"You rolled a {diceValue}.");                
                 playerPosition += diceValue;
 
