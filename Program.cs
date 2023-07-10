@@ -6,7 +6,8 @@ namespace SnakeAndLadderProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To Snake and Ladder program");            
+            Console.WriteLine("Welcome To Snake and Ladder program");
+            SnakeAndLadder.PlaySnakeAndLadder();
         }
     }
 }
